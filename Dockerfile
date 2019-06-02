@@ -11,4 +11,5 @@ ENV LEANOTE_DIR=/opt/leanote-v2.6.1
 RUN mkdir -p ${LEANOTE_DIR}
 RUN tar -zxf leanote-linux-amd64-v2.6.1.bin.tar.gz -C ${LEANOTE_DIR}
 WORKDIR ${LEANOTE_DIR}
+RUN chmod +x ${LEANOTE_DIR}/leanote/bin/run.sh
 CMD ["./leanote/bin/run.sh"]
