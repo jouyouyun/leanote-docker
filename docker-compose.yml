@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  leanote:
+    image: jouyouyun/leanote:2.6.1
+    restart: always
+    container_name: "leanote"
+    networks:
+      - backend
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /Data/Docker/Configuration/leanote/app.conf:/opt/leanote-v2.6.1/leanote/conf/app.conf
+    ports:
+      - "10091:9000"
+
+  mongodb:
+    image: jouyouyun/mongodb:3.6.12
+    restart: always
+    container_name: "leanote-mongo"
+    networks:
+      - backend
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /Data/Docker/data/leanote/db:/data/db
+
+networks:
+  backend:

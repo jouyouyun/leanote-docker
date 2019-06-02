@@ -1,0 +1,23 @@
+#+OPTIONS: toc:nil num:nil timestamp:nil
+#+AUTHOAR: jouyouyun <jouyouwen717@gmail.com>
+#+TITLE: Leanote Docker
+
+基于 =leanote v2.6.1= 和 =mongo 3.6.12= 制作。
+
+
+** Build
+
+=make docker=
+
+
+** Push
+
+=make docker-push=
+
+
+** Run
+
++ =leanote= 的配置文件路径为： =/opt/leanote-v2.6.1/leanote/conf/app.conf=
++ =mongodb= 的数据路径为：=/data/db=
+
+详见： [[./docker-compose.yml][docker-compose.yml]]
