@@ -7,6 +7,7 @@
 
 ** Build
 
+先执行 =cp conf/app.example.conf conf/app.conf= ,然后编辑 =conf/app.conf= 文件
 =make docker=
 
 

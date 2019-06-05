@@ -19,9 +19,12 @@ services:
     container_name: "leanote-mongo"
     networks:
       - backend
+    environment:
+      - ENABLE_AUTH=1
     volumes:
       - /etc/localtime:/etc/localtime
       - /Data/Docker/data/leanote/db:/data/db
+      - /Data/Docker/data/leanote/mongodb_init:/data/mongodb_init
 
 networks:
   backend:
