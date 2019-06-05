@@ -7,7 +7,6 @@
 
 ** Build
 
-先执行 =cp conf/app.example.conf conf/app.conf= ,然后编辑 =conf/app.conf= 文件
 =make docker=
 
 
@@ -20,5 +19,6 @@
 
 + =leanote= 的配置文件路径为： =/opt/leanote-v2.6.1/leanote/conf/app.conf=
 + =mongodb= 的数据路径为：=/data/db=
++ =mongodb= 的初始化数据路径为：=/data/mongodb_init=
 
 详见： [[./docker-compose.yml][docker-compose.yml]]
